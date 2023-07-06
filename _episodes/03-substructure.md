@@ -1,6 +1,6 @@
 ---
 title: "Jet substructure"
-teaching: 10
+teaching: 15
 exercises: 25
 questions:
 - "Which jet substructure observables are available in CMS MiniAOD?"
@@ -15,24 +15,17 @@ keypoints:
 - "The standard variables needed to tag W, Z, H boson or top quark jets in 2015 data are included in the POET."
 ---
 
-> ## Run POET (...maybe...)
-> If you have not already, run POET using the entire top quark pair test file. In `python/poet_cfg.py` set the
-> number of events to process to -1:
-> ~~~
-> #---- Select the maximum number of events to process (if -1, run over all events)
-> process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(-1) )
-> ~~~
-> {: .language-python}
-> ~~~
-> #---- Define the test source files to be read using the xrootd protocol (root://), or local files (file:)
-> process.source = cms.Source("PoolSource", fileNames = cms.untracked.vstring(
->         'root://eospublic.cern.ch//eos/opendata/cms/mc/RunIIFall15MiniAODv2/TT_Mtt-1000toInf_TuneCUETP8M1_13TeV-powheg-pythia8/MINIAODSIM/PU25nsData2015v1_76X_mcRun2_asymptotic_v12_ext1-v1/80000/000D040B-4ED6-E511-91B6-002481CFC92C.root',
->         )
-> )
-> ~~~
-> {: .language-python}
+> ## Download a POET output file
+> In the pre-learning lesson you may have processed a full high-mass $$t\bar{t}$$ file through POET.
+> A copy of the output can be [accessed here](https://jmhogan.web.cern.ch/jmhogan/OpenData/myoutput_ttbarM1000.root).
+> You can pull it into your CMSSW or ROOT docker container:
 >
-> And run POET using `cmsRun python/poet_cfg.py`.
+> ~~~
+> wget https://jmhogan.web.cern.ch/jmhogan/OpenData/myoutput_ttbarM1000.root
+> ~~~
+> {: .language-bash}
+>
+> For the following lesson you can interact with this file in either the CMSSW or ROOT docker containers.
 {: .prereq}
 
 
@@ -71,11 +64,11 @@ fatjet_softdropmass.push_back(corrL2L3*(double)smearedFatjet.userFloat("ak8PFJet
 > Study the connection between jet mass and jet momentum -- what minimum transverse momentum is
 > required for W boson and top quark jets to be found within a large-radius jet?
 >
-> Begin by opening the `myoutput.root` file you processed at the beginning of this segment.
+> Begin by opening the `myoutput_ttbarM1000.root` file you processed at the beginning of this segment.
 > Use ROOT's capability to draw two-dimensional histograms to compare various jet masses against
 > the jet's transverse momentum:
 > ~~~
-> $ root -l myoutput.root
+> $ root -l myoutput_ttbarM1000.root
 > [1] _file0->cd("myfatjets");
 > [2] Events->Draw("fatjet_<SOME MASS VARIABLE>:fatjet_corrpt","","colz"); // colz makes a heatmap
 > ~~~
@@ -169,7 +162,7 @@ For top quarks, the soft drop mass is used regardless of pileup mitigation techn
 
 > ## Exercise: explore jet tagging criteria
 > Study the connection between groomed mass, n-subjettiness ratios, and subjet b-tagging.
-> From the top quark events in `myoutput.root`, can you see either a W boson or top quark mass
+> From the top quark events in `myoutput_ttbarM1000.root`, can you see either a W boson or top quark mass
 > peak become visible in the `fatjet_prunedmass` or `fatjet_softdropmass` distribution as you
 > apply the various substructure criteria?
 >

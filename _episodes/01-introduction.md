@@ -3,7 +3,7 @@ title: "Intro Reading"
 teaching: 30
 exercises: 0
 questions:
-- ""
+- "Did you do the pre-learning module?"
 objectives:
 - "Review the treatment of jets in CMS before the Advanced Physics Objects lesson"
 keypoints:

@@ -5,7 +5,7 @@ permalink: index.html  # Is the only page that doesn't follow the pattern /:path
 ---
 
 
-![](https://cds.cern.ch/record/2693715/files/JetCartoon.png)
+![](https://cds.cern.ch/record/2693715/files/JetCartoon.png){:width="60%"}
 <p style="text-align: center;">Image credit: <a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.102.012010">Phys. Rev. D 102, 012010 (2020)</a></p>
 
 This lesson will introduce a few "advanced" topics that are not directly used in the analysis example. We'll talk more in depth about particle flow candidates, and discuss jet substructure, which is one interesting use of these candidates that has been used extensively in CMS Run 2 analyses.

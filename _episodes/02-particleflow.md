@@ -16,11 +16,11 @@ keypoints:
 ---
 
 > ## Particle Flow in CMS
-> The CMS particle-flow algorithm aims to identify and reconstruct individually all of the particles produced in a collision, through an optimal combination of the information from
-> the entire detector. These particles are then used to build higher-level physics objects, such as jets, and the missing transverse momentum, with superior resolution.
+> "The CMS particle-flow algorithm aims to identify and reconstruct individually all of the particles produced in a collision, through an optimal combination of the information from
+> the entire detector. These particles are then used to build higher-level physics objects, such as jets, and the missing transverse momentum, with superior resolution."
 >
 > *[Bachtis et al, CERN Courier 2016](https://cds.cern.ch/record/2232592/files/vol56-issue5-p027-e.pdf)*
-{: .callout}
+{: .testimonial}
 
 The concept of "particle flow" began at LEP, and has been used consistently by CMS. This method maps the mental picture of a particle "flowing" through multiple subdetectors onto the reconstruction method. Particle flow allows the resolution of tracking detectors and electromagnetic calorimeters to supplement information from hadronic calorimeters when reconstructing jets, missing transverse energy, tau leptons, and estimating pileup contributions.
 
@@ -35,7 +35,7 @@ Clustering proceeds in three basic steps:
     * Single-seed topological clusters: the cluster energy is the sum of all the individual cell energies within the topological cluster, and the cluster position is found from the energy-weighted average of the individual cell positions.
     * Multiple-seed topological clusters: each seed is assumed to represent a unique energy cluster, but the energy deposited in non-seed cells must be shared between the various clusters within the topological cluster. An iterative procedure is used to converge on cluster energies and positions based on energy-weighted averages of fractional cell energies. The images below show an example of this type of cluster, with cells represented as squares in $$\eta-\phi$$ space.
 
-![](../assets/img/PFlowMultiSeedCluster.png)![](../assets/img/PFlowMultiSeedClusterFunction.png)
+![](../assets/img/PFlowMultiSeedCluster.png){:width="50%"}![](../assets/img/PFlowMultiSeedClusterFunction.png){:width="50%"}
 
 ## Links and Blocks
 
@@ -99,7 +99,7 @@ At this point, all the tracks and clusters related to muons, electrons, photons,
 
 The final step in candidate formation is to assign "lone" tracks as charged hadrons carrying the track's momentum and direction.
 
-> ### Charged hadron energy and direction
+> ## Charged hadron energy and direction
 > Typically, charged hadrons are assigned the momentum and direction of their linked track, assuming the pion mass.
 > Excess cluster energy can be assigned as photons and/or neutron hadrons, using the calibrated cluster energy and direction.
 {: .callout}

@@ -35,7 +35,7 @@ Clustering proceeds in three basic steps:
     * Single-seed topological clusters: the cluster energy is the sum of all the individual cell energies within the topological cluster, and the cluster position is found from the energy-weighted average of the individual cell positions.
     * Multiple-seed topological clusters: each seed is assumed to represent a unique energy cluster, but the energy deposited in non-seed cells must be shared between the various clusters within the topological cluster. An iterative procedure is used to converge on cluster energies and positions based on energy-weighted averages of fractional cell energies. The images below show an example of this type of cluster, with cells represented as squares in $$\eta-\phi$$ space.
 
-![](../assets/img/PFlowMultiSeedCluster.png){:width="50%"}![](../assets/img/PFlowMultiSeedClusterFunction.png){:width="50%"}
+![](../assets/img/PFlowMultiSeedCluster.png){:width="20%"}![](../assets/img/PFlowMultiSeedClusterFunction.png){:width="50%"}
 
 ## Links and Blocks
 
